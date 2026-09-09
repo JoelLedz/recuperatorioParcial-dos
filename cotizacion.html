@@ -16,8 +16,38 @@
                     <li><a href="#">Cotizacion</a></li>
                 </ul>
             </nav>
-        </header>  
+        </header> 
+        <form class="form-insta">
+            <fieldset class="config">
+                <legend>Configuración General</legend>
+                <label for="cant-instalaciones">Cantidad de instalaciones</label>
+                <input type="number" name="cant-instalaciones" class="cant_instalaciones" min="1">
+                <label for="paga-hora">Paga por hora</label>
+                 <input type="number" name="paga-hora" class="paga_hora" min="1">
+                 <button type="button" class="bt-confir">Confimar</button>
+            </fieldset>
+            <fieldset class="datos">
+                <legend>Datos del intalacion</legend>
+                <label for="nombre-obra">Nombre</label>
+                <input type="text" name="nombre-obra" class="nombre_obra">
+                <label for="">Personas necesarias</label>
+                <input type="number" name="personas" class="perNece" min="1">
+                <label for="">Días de producción</label>
+                <input type="number" name="diaProdu" class="dProdu" min="1">      
+                <label for="">Horas de Montaje por dia</label>
+                <input type="number" name="horaXdia" class="hXdia" min="1" max="24">
+                <button type="button" class="btn-agregar">Agregar</button>
+                <button type="button" class="btn-calcular" >Calcular</button>
+                <button type="reset"  class="btn-reset">Resetar</button>
+            </fieldset>
+        </form> 
     </main>
+     <footer>
+        <address>
+            <p>Para contactarse escribir a</p>
+            <a href="casey@artedigital.com">casey@artedigital.com</a>
+        </address>
+    </footer>
     <script src="js/formulario.js"></script>
 </body>
 </html>
