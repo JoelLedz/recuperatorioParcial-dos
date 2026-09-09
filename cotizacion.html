@@ -10,7 +10,6 @@
     <title>Casey Reas</title>
 </head>
 <body>
-    <main id="contenedor">
         <header>
             <p>Casey Reas</p>
             <nav>
@@ -21,31 +20,32 @@
                 </ul>
             </nav>
         </header> 
-<form class="form-insta">
- <fieldset class="config">
-             <legend>Configuración General</legend>
-             <label for="cant_instalaciones">Cantidad de instalaciones</label>
-             <input type="number" name="cant-instalaciones" id="cant_instalaciones" min="1">
-             <label for="paga_hora">Paga por hora</label>
-             <input type="number" name="paga-hora" id="paga_hora" min="1">
-             <button type="button" id="bt-confir">Confirmar</button>
- </fieldset>
-   <fieldset class="datos">
-                 <legend>Datos del intalacion</legend>
-                 <label for="nombre_obra">Nombre</label>
-                 <input type="text" name="nombre-obra" id="nombre_obra">
-                 <label for="perNece">Personas necesarias</label>
-                 <input type="number" name="personas" id="perNece" min="1">
-                 <label for="dProdu">Días de producción</label>
-                <input type="number" name="diaProdu" id="dProdu" min="1">
-                 <label for="hXdia">Horas de Montaje por dia</label>
-                 <input type="number" name="horaXdia" id="hXdia" min="1" max="24">
-                 <button type="button" id="btn-agregar">Agregar</button>
-                 <button type="button" id="btn-calcular">Calcular</button>
-                 <button type="reset" id="btn-reset">Resetar</button>
-    </fieldset>
-</form>
-    </main>
+<main id="contenedor">
+            <form class="form-insta">
+            <fieldset class="config">
+                        <legend>Configuración General</legend>
+                        <label for="cant_instalaciones">Cantidad de instalaciones</label>
+                        <input type="number" name="cant-instalaciones" id="cant_instalaciones" min="1">
+                        <label for="paga_hora">Paga por hora</label>
+                        <input type="number" name="paga-hora" id="paga_hora" min="1">
+                        <button type="button" id="bt-confir">Confirmar</button>
+            </fieldset>
+            <fieldset class="datos">
+                            <legend>Datos del intalacion</legend>
+                            <label for="nombre_obra">Nombre</label>
+                            <input type="text" name="nombre-obra" id="nombre_obra">
+                            <label for="perNece">Personas necesarias</label>
+                            <input type="number" name="personas" id="perNece" min="1">
+                            <label for="dProdu">Días de producción</label>
+                            <input type="number" name="diaProdu" id="dProdu" min="1">
+                            <label for="hXdia">Horas de Montaje por dia</label>
+                            <input type="number" name="horaXdia" id="hXdia" min="1" max="24">
+                            <button type="button" id="btn-agregar">Agregar</button>
+                            <button type="button" id="btn-calcular">Calcular</button>
+                            <button type="reset" id="btn-reset">Resetar</button>
+                </fieldset>
+            </form>
+</main>
      <footer>
         <address>
             <p>Para contactarse escribir a

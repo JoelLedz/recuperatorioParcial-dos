@@ -75,3 +75,30 @@ flex-direction: row;
   font-weight: 700;
   font-style: normal;
 }
+/*////////////////////////////////////   Pagina obras   /////////////////////////////////////////*/
+.columaDos{
+   display: flex;
+flex-direction: row;
+}
+.columaDos H2{
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.columDrch{
+   padding: 2rem;
+}
+.columDrch div img {
+    width: 100%;
+}
+.columIzq{
+    color: white;
+    background-color: #073040;
+   margin-left: 1.5rem;
+   margin-right: 1.5rem;
+   padding: 2rem;
+}
+.columIzq div img {
+    width: 85%;
+  margin-left: 2.5rem;
+}
