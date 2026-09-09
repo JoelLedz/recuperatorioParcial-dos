@@ -1,0 +1,77 @@
+body{
+    background-image: url("/img/fondo.png");
+}
+#contenedor{  
+    background-color: white;
+    max-width: 1200px;
+    width: 100%;
+    padding: 1.5rem;
+    margin: auto;  
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li {
+    display: inline;
+    margin-left: 2rem;
+}
+footer , header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+    color: aliceblue;
+    height: 5rem;
+}
+header p {
+    font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+a{
+    color: white;
+    text-decoration: none; 
+    font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal
+}
+a:hover{
+    color: #47B5FF;
+}
+/*///////////////////////////////////  Pagina Home  //////////////////////////////////////////////////*/
+.home{
+      display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin: 2rem;
+}
+.home div img{
+  width: 95%;
+}
+.home p { 
+      font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal
+}
+.frase{
+ margin-right: 2rem;
+}
+.frase h1{
+    font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.colum{
+   display: flex;
+flex-direction: row;
+}
+.colum section {
+    margin: 1.5rem;
+}
+.colum section h2{
+      font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
