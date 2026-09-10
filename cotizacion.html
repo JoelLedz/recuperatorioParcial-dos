@@ -22,15 +22,15 @@
         </header> 
 <main id="contenedor">
             <form class="form-insta">
-            <fieldset class="config">
+            <fieldset id="config">
                         <legend>Configuración General</legend>
-                        <label for="cant_instalaciones">Cantidad de instalaciones</label>
-                        <input type="number" name="cant-instalaciones" id="cant_instalaciones" min="1">
+                        <label for="cant_instalaciones" >Cantidad de instalaciones</label>
+                        <input type="number" name="cant-instalaciones" id="cant_instalaciones" required >
                         <label for="paga_hora">Paga por hora</label>
-                        <input type="number" name="paga-hora" id="paga_hora" min="1">
+                        <input type="number" name="paga-hora" id="paga_hora" required>
                         <button type="button" id="bt-confir">Confirmar</button>
             </fieldset>
-            <fieldset class="datos">
+            <fieldset id="datos" disabled>
                             <legend>Datos del intalacion</legend>
                             <label for="nombre_obra">Nombre</label>
                             <input type="text" name="nombre-obra" id="nombre_obra">
@@ -41,7 +41,7 @@
                             <label for="hXdia">Horas de Montaje por dia</label>
                             <input type="number" name="horaXdia" id="hXdia" min="1" max="24">
                             <button type="button" id="btn-agregar">Agregar</button>
-                            <button type="button" id="btn-calcular">Calcular</button>
+                            <button type="button" id="btn-calcular" disabled>Calcular</button>
                             <button type="reset" id="btn-reset">Resetar</button>
                 </fieldset>
             </form>
