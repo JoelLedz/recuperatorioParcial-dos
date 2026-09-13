@@ -1,4 +1,5 @@
 let intalaciones=[]
+let contador = 1
 /*/////////////////// Captura de los primeros datos///////////////////// */
 let cantObra = document.querySelector("#cant_instalaciones");
 let pagaH = document.querySelector("#paga_hora");
@@ -41,16 +42,36 @@ function validaHoras (horaXd){
     return true;
   }    
 }
+/*//////////////////// Funcion para el array de objetos /////////////////////*/
+function agregarObra(){
+  let obra = {
+    nombre:nombreObra.value,
+    personas:Number(persoNece.value),
+    dias:Number(diasProdu.value),
+    horas: Number (horaXd.value),
+  }
+  intalaciones.push(obra)
+};
 /*///////////////////// Accion del botones /////////////////////*/
 
-btnConfirm.addEventListener('click',function(){
+btnConfirm.addEventListener('click',function() {
   if(Number(cantObra.value)>0 && Number(pagaH.value)>0){
      Formulario.disabled = false; /*desbloquea la segunda parte del formulario*/
-   } else { alert("Los datos son invalidos")}
-});
+     inicio.disabled = true;
+}else { alert("Los datos son invalidos")}});
 
 btnAgregar.addEventListener('click',function(){
   if (valiNombre(nombreObra.value) && validaHoras(horaXd.value) && valiPerso(persoNece.value) && validaDias(diasProdu.value)){
-    let hola="hola Esta bien";
-   console.log(hola);
-  } else { alert("Los datos son invalidos")}})
+             console.log(intalaciones);
+              if (contador<=Number(cantObra.value)){
+              agregarObra()
+              contador++ }
+              else if (contador = Number(cantObra.value)){
+                alert("Ya cargaste todas las instalaciones.");
+                btnAgregar.disabled = true;
+              }
+              else {
+              btnAgregar.disabled = true;
+              } 
+  }});
+
