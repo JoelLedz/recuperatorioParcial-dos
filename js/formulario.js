@@ -14,13 +14,43 @@ let inicio = document.querySelector("#config");
  let btnReset = document.querySelector("#btn-reset");
  let Formulario =document.querySelector("#datos");
 
-/*///////////////////// Accion del boton confimar /////////////////////*/
+/*///////////////////// Funciones de validacion //////////////////////// */ 
+function valiNombre (nombreObra){
+  if(String(nombreObra)==""){
+    alert ("El nombre es invalido.");
+    return false; 
+  } else {return true}  
+}
+function validaDias (diasProdu){
+  if(Number(diasProdu)<= 0){
+    alert ("Los dias de produccion deben ser un número mayor a 0.");
+    return false; 
+  } else {return true}
+}
+function valiPerso (persoNece){
+  if(Number(persoNece)<= 0){
+    alert ("Los perosonas para la produccion deben ser un número mayor a 0.");
+    return false; 
+  } else {return true}
+}
+function validaHoras (horaXd){
+  if ( Number(horaXd)<= 0 || Number(horaXd)>24){
+    alert ("Las horas por día deben ser un número mayor a 0 y menor a 24.");
+    return false;
+  } else {
+    return true;
+  }    
+}
+/*///////////////////// Accion del botones /////////////////////*/
 
 btnConfirm.addEventListener('click',function(){
-  if( Number(cantObra.value)> 0 && Number(pagaH.value)>0){
+  if(Number(cantObra.value)>0 && Number(pagaH.value)>0){
      Formulario.disabled = false; /*desbloquea la segunda parte del formulario*/
    } else { alert("Los datos son invalidos")}
 });
 
-
-
+btnAgregar.addEventListener('click',function(){
+  if (valiNombre(nombreObra.value) && validaHoras(horaXd.value) && valiPerso(persoNece.value) && validaDias(diasProdu.value)){
+    let hola="hola Esta bien";
+   console.log(hola);
+  } else { alert("Los datos son invalidos")}})
