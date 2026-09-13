@@ -14,6 +14,9 @@ let inicio = document.querySelector("#config");
  let btnCalcular = document.querySelector("#btn-calcular");
  let btnReset = document.querySelector("#btn-reset");
  let Formulario =document.querySelector("#datos");
+ let totalDias =document.querySelector(".totalDia");
+ let largaDia =document.querySelector(".instalarLarga");
+ let Costo = document.querySelector(".persentajeCosto");
 
 /*///////////////////// Funciones de validacion //////////////////////// */ 
 function valiNombre (nombreObra){
@@ -52,6 +55,7 @@ function agregarObra(){
   }
   intalaciones.push(obra)
 };
+
 /*///////////////////// Accion del botones /////////////////////*/
 
 btnConfirm.addEventListener('click',function() {
@@ -69,9 +73,21 @@ btnAgregar.addEventListener('click',function(){
               else if (contador = Number(cantObra.value)){
                 alert("Ya cargaste todas las instalaciones.");
                 btnAgregar.disabled = true;
+                btnCalcular.disabled = false;
               }
               else {
               btnAgregar.disabled = true;
               } 
   }});
 
+/*//////////////// Funcion de total del costo ///////////////////////////// */
+
+
+/*//////////////// Boton calcular ///////////////////////////// */
+btnCalcular.addEventListener('click',function(){
+    let todoBien="Calcular esta piola";
+    console.log(todoBien)
+    totalDias.innerText ="hola";
+    largaDia .innerText ="como estas?";
+    Costo.innerText ="Bien, Funciona";
+});
