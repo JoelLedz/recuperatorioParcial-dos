@@ -75,6 +75,41 @@ flex-direction: row;
   font-weight: 700;
   font-style: normal;
 }
+.galeria{justify-content: center;
+        align-items: center;
+        margin: 2rem;
+}
+.galeria h2,h3{
+    font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.filaUno{
+    display: flex;
+flex-direction: row;
+}
+.filaUno div{
+    margin-left: 4rem;
+}
+.filaUno img {
+    width:80%;
+}
+.filaDos{
+    display: flex;
+flex-direction: row;
+}
+.filaDos div{
+    margin-left: 4rem;
+}
+.filaDos img {
+    width:80%;
+}
+.filaTres {
+   margin-left: 20rem;
+}
+.filaTres img {
+    width:50%;
+}
 /*////////////////////////////////////   Pagina obras   /////////////////////////////////////////*/
 .columaDos{
    display: flex;
@@ -109,3 +144,18 @@ flex-direction: row;
 }
 
 /*////////////////////////////////////   Pagina Cotizacion  /////////////////////////////////////////*/
+.colform {
+      display: flex;
+flex-direction: row;
+}
+.foto{
+    margin: 1rem; 
+    width: 50rem;
+}
+.foto img {
+    width: 100%;
+}
+.formulario{
+        
+    margin-top: 8rem;
+}

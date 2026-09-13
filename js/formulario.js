@@ -81,13 +81,51 @@ btnAgregar.addEventListener('click',function(){
   }});
 
 /*//////////////// Funcion de total del costo ///////////////////////////// */
+function costoDiaEstudio(){
+  let totalPersonas = 0;
+  for (let i = 0; i < intalaciones.length; i++){
+    totalPersonas += intalaciones[i].personas;
+  }
+  return totalPersonas * Number(horaXd.value) * Number(pagaH.value);
+}
 
+function obraConMasDias(){
+  let obraMasDias = intalaciones[0];
+  for (let i = 1; i < intalaciones.length; i++){
+    if (intalaciones[i].dias > obraMasDias.dias){
+      obraMasDias = intalaciones[i];
+    }
+  }
+  return obraMasDias;
+}
 
+function costoDeObra(obra){
+  return obra.personas * obra.dias * Number(horaXd.value) * Number(pagaH.value);
+}
+
+function costoTotalEstudio(){
+  let total = 0;
+  for (let i = 0; i < intalaciones.length; i++){
+    total += costoDeObra(intalaciones[i]);
+  }
+  return total;
+}
+
+function porcentajeObraMasDias(){
+  let obra = obraConMasDias();
+  return (costoDeObra(obra) / costoTotalEstudio()) * 100;
+}
 /*//////////////// Boton calcular ///////////////////////////// */
 btnCalcular.addEventListener('click',function(){
-    let todoBien="Calcular esta piola";
-    console.log(todoBien)
-    totalDias.innerText ="hola";
-    largaDia .innerText ="como estas?";
-    Costo.innerText ="Bien, Funciona";
+    let costoDia = costoDiaEstudio();
+    let obraMasDias = obraConMasDias();
+    let costoObraMasDias = costoDeObra(obraMasDias);
+    let porcentaje = porcentajeObraMasDias();
+
+    totalDias.innerText = "Costo de un día de trabajo del estudio: $" + costoDia;
+    largaDia.innerText = "Instalación con más días: " + obraMasDias.nombre + " - Costo: $" + costoObraMasDias;
+    Costo.innerText = "Porcentaje sobre el total: " + porcentaje + "%";
 });
+btnReset.addEventListener('click',function(){
+   location.reload();
+})
